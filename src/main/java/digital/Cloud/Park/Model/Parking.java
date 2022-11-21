@@ -1,9 +1,11 @@
 package digital.Cloud.Park.Model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.time.LocalDateTime;
-
+@Entity
 public class Parking {
-
+    @Id
     private String id;
     private String license;
     private String state;
