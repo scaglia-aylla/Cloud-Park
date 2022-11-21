@@ -17,11 +17,13 @@ public class ParkingService {
     private final ParkingRepository parkingRepository;
 
     public ParkingService(ParkingRepository parkingRepository) {
+
         this.parkingRepository = parkingRepository;
     }
 
     @Transactional(readOnly = true)
     public List<Parking> findAll() {
+
         return parkingRepository.findAll();
     }
 
@@ -66,6 +68,7 @@ public class ParkingService {
     }
 
     private static String getUUID() {
+
         return UUID.randomUUID().toString().replace("-", "");
     }
 }
